@@ -1,0 +1,84 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    background-image: url("./kepek/hatter.jpg");
+}
+header{
+    display: grid;
+    grid-area: h;
+    text-align: center;
+    background-image: url("./kepek/fejlec.jpg");
+    color: white;
+    height: 100px;
+    margin-bottom: 10px;
+    
+}
+nav{
+    display: grid;
+    grid-area: n;
+    font-size: 25px;
+}
+nav ul{
+    list-style: none;
+    list-style-type: none;
+}
+nav li a{
+    text-decoration: none;
+    width:100%;
+    background-color: rgb(46, 46, 216);
+    color: white;
+    border-radius: 20px;
+}
+article{
+    display: grid;
+    grid-area: a;
+    height: 300px;
+}
+aside{
+    display: grid;
+    grid-area: as;
+    text-align: justify;
+    border-left: 1px solid gray ;
+    padding-left: 5px;
+}
+p{
+    font-size: 14px;
+}
+footer{
+    display: grid;
+    grid-area: f;
+    background-color: rgb(46, 46, 216);
+    text-align: center;
+    height: 30px;
+}
+table {
+    width: 80%;
+    border-collapse: collapse;
+}
+tr {
+    border-bottom: 1px solid blue;
+}
+tr:nth-child(odd) {
+    background-color: skyblue;
+}
+main{
+    display: grid;
+    margin: auto;
+    background-color: white;
+    max-width: 900px;
+    grid-template-columns:  auto auto auto;
+    grid-template-areas:    "h h h"
+                            "n a as"
+                            "f f f";
+}
+
+@media screen and (max-width: 700px) {
+    main{
+        grid-template-areas:    "h"
+                                "n"
+                                "a"
+                                "as"
+                                "f";
+    }
+}
